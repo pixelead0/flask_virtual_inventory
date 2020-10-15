@@ -1,0 +1,5 @@
+[pycodestyle]
+max-line-length = 80
+ignore = E266,W504,E131
+exclude = .git,migrations,custom_migrations,stubs,__init__.py
+filename = *.py

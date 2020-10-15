@@ -1,0 +1,29 @@
+version: "3.7"
+
+services:
+  db:
+    image: postgres:11
+    restart: always
+    environment:
+      - POSTGRES_USER=${POSTGRES_USER}
+      - POSTGRES_PASSWORD=${POSTGRES_PASSWORD}
+      - POSTGRES_DB=${POSTGRES_DB}
+  api:
+    build:
+      context: .
+      dockerfile: ./containers/api/Dockerfile
+    working_dir: /api
+    entrypoint: /entrypoint.sh
+    volumes:
+      - ./api:/api
+    ports:
+      # - "8080:8000"
+      - "80:5000"
+    depends_on:
+      - db
+
+  redis:
+    image: redis:alpine
+    expose:
+      - "6379"
+    restart: always
