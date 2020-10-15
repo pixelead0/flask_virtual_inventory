@@ -13,6 +13,11 @@ class Store(db.Model, AddressMixin, TimestampMixin):
         primary_key=True,
     )
 
+    branch_number = db.Column(
+        db.Integer,
+        unique=True,
+    )
+
     name = db.Column(
         db.String(100),
     )
