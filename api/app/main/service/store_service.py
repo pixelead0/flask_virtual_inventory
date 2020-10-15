@@ -10,13 +10,13 @@ def save_new_store(data):
             branch_number=data["branch_number"],
             name=data["name"],
             description=data["description"],
-            address_street=data["street"],
-            address_number=data["number"],
-            address_indoor_number=data["indoor_number"],
-            address_zipcode=data["zipcode"],
-            address_suburb=data["suburb"],
-            address_municipality=data["municipality"],
-            address_state=data["state"],
+            address_street=data["address_street"],
+            address_number=data["address_number"],
+            address_indoor_number=data["address_indoor_number"],
+            address_zipcode=data["address_zipcode"],
+            address_suburb=data["address_suburb"],
+            address_municipality=data["address_municipality"],
+            address_state=data["address_state"],
         )
         save_changes(new_store)
         response_object = {

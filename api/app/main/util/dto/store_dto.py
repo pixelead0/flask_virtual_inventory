@@ -18,34 +18,34 @@ class StoreDto:
                 required=True,
                 description="store description",
             ),
-            "street": fields.String(
+            "address_street": fields.String(
                 required=False,
-                description="store street",
+                description="store address street",
             ),
-            "number": fields.String(
+            "address_number": fields.String(
                 required=False,
                 description="store address number",
             ),
-            "indoor_number": fields.String(
+            "address_indoor_number": fields.String(
                 required=False,
                 description="store address indoor number",
             ),
-            "zipcode": fields.String(
+            "address_zipcode": fields.String(
                 required=False,
-                description="store zipcode",
-                max_length=5
+                max_length=5,
+                description="store address zipcode",
             ),
-            "suburb": fields.String(
+            "address_suburb": fields.String(
                 required=False,
-                description="store suburb",
+                description="store address suburb",
             ),
-            "municipality": fields.String(
+            "address_municipality": fields.String(
                 required=False,
-                description="store municipality",
+                description="store address municipality",
             ),
-            "state": fields.String(
+            "address_state": fields.String(
                 required=False,
-                description="store state",
+                description="store address state",
             ),
         },
     )
