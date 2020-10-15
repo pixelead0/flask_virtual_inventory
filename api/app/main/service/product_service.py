@@ -8,7 +8,7 @@ def save_new_product(data):
         new_product = Product(
             sku=data["sku"],
             name=data["name"],
-            description=data["productname"],
+            description=data["description"],
         )
         save_changes(new_product)
         response_object = {
@@ -19,7 +19,7 @@ def save_new_product(data):
     else:
         response_object = {
             "status": "fail",
-            "message": "Product already exists. Please Log in.",
+            "message": "Product already exists.",
         }
         return response_object, 409
 

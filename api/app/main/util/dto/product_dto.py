@@ -10,18 +10,15 @@ class ProductDto:
                 required=True,
                 description="product SKU",
             ),
-
             "name": fields.String(
                 required=True,
                 description="product name",
             ),
-
             "description": fields.String(
                 required=True,
                 description="product description",
             ),
-
-            "public_id": fields.String(
+            "id": fields.Integer(
                 description="product identifier",
             ),
         },
