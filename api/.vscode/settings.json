@@ -1,0 +1,6 @@
+{
+    "python.formatting.provider": "black",
+    "python.pythonPath": "/home/kubrick/www/flask_virtual_inventory/venv/bin/python3.8",
+    "python.linting.enabled": true,
+    "python.linting.flake8Enabled": true
+}
